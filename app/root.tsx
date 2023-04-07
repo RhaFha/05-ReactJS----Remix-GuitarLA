@@ -81,35 +81,35 @@ interface IPropsDocument{
 }
 
 /*** Manejo de errores */
-  export function ErrorBoundary() {
-    const error = useRouteError();
+  // export function ErrorBoundary() {
+  //   const error = useRouteError();
   
-    // when true, this is what used to go to `CatchBoundary`
-    if (isRouteErrorResponse(error)) {
-      return (
-        <Document>
-          <p className='error'>{error.status} - {error.statusText}</p>
-          <Link to='/' className='error-enlace'>Volver a la pagina principal</Link>
-        </Document>
-      );
-    }
+  //   // when true, this is what used to go to `CatchBoundary`
+  //   if (isRouteErrorResponse(error)) {
+  //     return (
+  //       <Document>
+  //         <p className='error'>{error.status} - {error.statusText}</p>
+  //         <Link to='/' className='error-enlace'>Volver a la pagina principal</Link>
+  //       </Document>
+  //     );
+  //   }
   
-    // Don't forget to typecheck with your own logic.
-    // Any value can be thrown, not just errors!
-    //let errorMessage = "Unknown error";
-    // if (isDefinitelyAnError(error)) {
-    //   errorMessage = error.message;
-    // }
+  //   // Don't forget to typecheck with your own logic.
+  //   // Any value can be thrown, not just errors!
+  //   //let errorMessage = "Unknown error";
+  //   // if (isDefinitelyAnError(error)) {
+  //   //   errorMessage = error.message;
+  //   // }
   
-    return (
-        <Document>
-        <h1>Uh oh ...</h1>
-        <p>Something went wrong.</p>
-        {/* <pre>{errorMessage}</pre> */}
-        <pre>Unknown error</pre>
-      </Document>
-    );
-  }
+  //   return (
+  //       <Document>
+  //       <h1>Uh oh ...</h1>
+  //       <p>Something went wrong.</p>
+  //       {/* <pre>{errorMessage}</pre> */}
+  //       <pre>Unknown error</pre>
+  //     </Document>
+  //   );
+  // }
 
   // export function ErrorBoundary({ error }) {
   //   console.error(error);

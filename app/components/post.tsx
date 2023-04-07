@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 import { formatearFecha } from "~/utils/helpers";
 
-function Post({post}) {console.log(post)
+function Post({post}) {
 
     const {id, attributes:{contenido, imagen, titulo, url, publishedAt}} = post;
   

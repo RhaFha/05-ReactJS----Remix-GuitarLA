@@ -2,7 +2,7 @@ import {Link} from '@remix-run/react';
 
 function Guitarra({guitarra}) {
 
-  const {precio, descripcion, imagen, url, nombre} = guitarra.attributes;console.log(guitarra.attributes.url)
+  const {precio, descripcion, imagen, url, nombre} = guitarra.attributes;
 
   return (
     <div className="guitarra">
