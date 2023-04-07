@@ -1,7 +1,6 @@
 import { getPost } from "~/models/posts.server";
 import { useLoaderData } from "@remix-run/react";
 import { formatearFecha } from "~/utils/helpers";
-import styles from '~/styles/blog.css';
 
 export function meta({data}){
     if(!data){
@@ -16,15 +15,6 @@ export function meta({data}){
     return[
         {
             title: `GuitarLA - ${titulo}`,
-        }
-    ]
-}
-
-export function links(){
-    return [
-        {
-            rel: 'stylesheet',
-            href: styles,
         }
     ]
 }
@@ -46,7 +36,7 @@ function Post() {
     const post = useLoaderData();
     const {id, attributes:{contenido, imagen, titulo, url, publishedAt}} = post?.data[0];
   return (
-    <article className="contenedor post mt-3">
+    <article className="post mt-3">
         <img className="imagen" src={imagen?.data?.attributes?.url} alt="Imagen del blog" />
         <div className="contenido">
             <h3>{titulo}</h3>
