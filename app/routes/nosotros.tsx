@@ -24,6 +24,7 @@ export function links(){
 }
 
 export default function Nosotros() {
+
   return (
     <main className="contenedor nosotros">
       <h2 className="heading">
